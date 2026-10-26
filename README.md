@@ -135,7 +135,7 @@ python3 src/synth_data.py --n 3000 --out data/synthetic
 # Step 2: Build SFT training pairs
 python3 src/sft_dataset.py
 
-# Step 3: Train LoRA adapter (~1.5h on T4 GPU)
+# Step 3: Train LoRA adapter (~4.5h on T4 GPU on colab or ~3h on jetson agx 64gb)
 python3 src/train_sft.py \
     --base Qwen/Qwen2.5-1.5B-Instruct \
     --out models/lora-sft \
