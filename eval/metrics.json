@@ -1,0 +1,698 @@
+{
+  "engine": {
+    "name": "engine",
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "n": 500,
+    "unparsed": 0,
+    "per_class": {
+      "APPROVE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 146
+      },
+      "FLAG_REVIEW": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 86
+      },
+      "REJECT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 268
+      }
+    },
+    "confusion": {
+      "APPROVE<-APPROVE": 146,
+      "FLAG_REVIEW<-FLAG_REVIEW": 86,
+      "REJECT<-REJECT": 268
+    },
+    "macro_f1_rules": 1.0,
+    "per_rule": {
+      "RULE-AGE-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "RULE-BANKACCTS-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "RULE-BANKRUPTCY-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 21
+      },
+      "RULE-CREDIT-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 196
+      },
+      "RULE-DTI-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 72
+      },
+      "RULE-EMPLOY-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 28
+      },
+      "RULE-EMPLOY-002": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 62
+      },
+      "RULE-INCOME-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 48
+      },
+      "RULE-LOANAMT-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 29
+      },
+      "RULE-RESIDENCY-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 31
+      }
+    },
+    "boundary_slices": {
+      "RULE-AGE-001": {
+        "near": {
+          "n": 57,
+          "acc": 1.0
+        },
+        "far": {
+          "n": 443,
+          "acc": 1.0
+        },
+        "threshold": 18,
+        "band": "\u00b12-3%"
+      },
+      "RULE-CREDIT-001": {
+        "near": {
+          "n": 86,
+          "acc": 1.0
+        },
+        "far": {
+          "n": 414,
+          "acc": 1.0
+        },
+        "threshold": 670,
+        "band": "\u00b12-3%"
+      },
+      "RULE-INCOME-001": {
+        "near": {
+          "n": 11,
+          "acc": 1.0
+        },
+        "far": {
+          "n": 484,
+          "acc": 1.0
+        },
+        "threshold": 30000,
+        "band": "\u00b12-3%"
+      },
+      "RULE-DTI-001": {
+        "near": {
+          "n": 25,
+          "acc": 1.0
+        },
+        "far": {
+          "n": 473,
+          "acc": 1.0
+        },
+        "threshold": 40,
+        "band": "\u00b12-3%"
+      },
+      "RULE-EMPLOY-002": {
+        "near": {
+          "n": 65,
+          "acc": 1.0
+        },
+        "far": {
+          "n": 435,
+          "acc": 1.0
+        },
+        "threshold": 6,
+        "band": "\u00b12-3%"
+      },
+      "RULE-LOANAMT-001": {
+        "near": {
+          "n": 22,
+          "acc": 1.0
+        },
+        "far": {
+          "n": 472,
+          "acc": 1.0
+        },
+        "threshold": "0.5x income",
+        "band": "\u00b12-3%"
+      }
+    },
+    "faithfulness": {
+      "n": 500,
+      "citation_precision": 1.0,
+      "binding_recall": 1.0,
+      "fully_faithful_share": 0.708
+    }
+  },
+  "sft": {
+    "name": "sft",
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "n": 5,
+    "unparsed": 5,
+    "per_class": {
+      "APPROVE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "FLAG_REVIEW": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "REJECT": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "UNPARSED": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion": {
+      "UNPARSED<-APPROVE": 2,
+      "UNPARSED<-FLAG_REVIEW": 1,
+      "UNPARSED<-REJECT": 2
+    },
+    "macro_f1_rules": 0.0,
+    "per_rule": {
+      "RULE-CREDIT-001": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "RULE-DTI-001": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "RULE-INCOME-001": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "RULE-LOANAMT-001": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "boundary_slices": {
+      "RULE-AGE-001": {
+        "near": {
+          "n": 0,
+          "acc": 0
+        },
+        "far": {
+          "n": 5,
+          "acc": 0.0
+        },
+        "threshold": 18,
+        "band": "\u00b12-3%"
+      },
+      "RULE-CREDIT-001": {
+        "near": {
+          "n": 0,
+          "acc": 0
+        },
+        "far": {
+          "n": 5,
+          "acc": 0.0
+        },
+        "threshold": 670,
+        "band": "\u00b12-3%"
+      },
+      "RULE-INCOME-001": {
+        "near": {
+          "n": 0,
+          "acc": 0
+        },
+        "far": {
+          "n": 5,
+          "acc": 0.0
+        },
+        "threshold": 30000,
+        "band": "\u00b12-3%"
+      },
+      "RULE-DTI-001": {
+        "near": {
+          "n": 0,
+          "acc": 0
+        },
+        "far": {
+          "n": 4,
+          "acc": 0.0
+        },
+        "threshold": 40,
+        "band": "\u00b12-3%"
+      },
+      "RULE-EMPLOY-002": {
+        "near": {
+          "n": 1,
+          "acc": 0.0
+        },
+        "far": {
+          "n": 4,
+          "acc": 0.0
+        },
+        "threshold": 6,
+        "band": "\u00b12-3%"
+      },
+      "RULE-LOANAMT-001": {
+        "near": {
+          "n": 0,
+          "acc": 0
+        },
+        "far": {
+          "n": 5,
+          "acc": 0.0
+        },
+        "threshold": "0.5x income",
+        "band": "\u00b12-3%"
+      }
+    },
+    "faithfulness": {
+      "n": 5,
+      "citation_precision": 0.0,
+      "binding_recall": 0.0,
+      "fully_faithful_share": 0.0
+    }
+  },
+  "zero_shot": {
+    "name": "zero_shot",
+    "accuracy": 0.505,
+    "macro_f1": 0.383,
+    "n": 200,
+    "unparsed": 4,
+    "per_class": {
+      "APPROVE": {
+        "precision": 0.7143,
+        "recall": 0.7895,
+        "f1": 0.75,
+        "support": 57
+      },
+      "FLAG_REVIEW": {
+        "precision": 0.2073,
+        "recall": 0.4722,
+        "f1": 0.2881,
+        "support": 36
+      },
+      "REJECT": {
+        "precision": 0.7647,
+        "recall": 0.3645,
+        "f1": 0.4937,
+        "support": 107
+      },
+      "UNPARSED": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion": {
+      "FLAG_REVIEW<-APPROVE": 10,
+      "APPROVE<-FLAG_REVIEW": 8,
+      "APPROVE<-REJECT": 10,
+      "APPROVE<-APPROVE": 45,
+      "FLAG_REVIEW<-REJECT": 55,
+      "REJECT<-REJECT": 39,
+      "FLAG_REVIEW<-FLAG_REVIEW": 17,
+      "UNPARSED<-REJECT": 3,
+      "REJECT<-FLAG_REVIEW": 10,
+      "UNPARSED<-FLAG_REVIEW": 1,
+      "REJECT<-APPROVE": 2
+    },
+    "macro_f1_rules": 0.4343,
+    "per_rule": {
+      "RULE-AGE-001": {
+        "precision": 0.4286,
+        "recall": 1.0,
+        "f1": 0.6,
+        "support": 3
+      },
+      "RULE-BANKACCTS-001": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.7692,
+        "support": 8
+      },
+      "RULE-BANKRUPTCY-001": {
+        "precision": 1.0,
+        "recall": 0.7778,
+        "f1": 0.875,
+        "support": 9
+      },
+      "RULE-CREDIT-001": {
+        "precision": 0.6701,
+        "recall": 0.8025,
+        "f1": 0.7303,
+        "support": 81
+      },
+      "RULE-DTI-001": {
+        "precision": 0.3784,
+        "recall": 0.9333,
+        "f1": 0.5385,
+        "support": 30
+      },
+      "RULE-EMPLOY-001": {
+        "precision": 0.1207,
+        "recall": 0.7,
+        "f1": 0.2059,
+        "support": 10
+      },
+      "RULE-EMPLOY-002": {
+        "precision": 0.1186,
+        "recall": 0.2593,
+        "f1": 0.1628,
+        "support": 27
+      },
+      "RULE-INCOME-001": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 15
+      },
+      "RULE-LOANAMT-001": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10
+      },
+      "RULE-RESIDENCY-001": {
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1": 0.4615,
+        "support": 10
+      }
+    },
+    "boundary_slices": {
+      "RULE-AGE-001": {
+        "near": {
+          "n": 25,
+          "acc": 0.6
+        },
+        "far": {
+          "n": 175,
+          "acc": 0.491
+        },
+        "threshold": 18,
+        "band": "\u00b12-3%"
+      },
+      "RULE-CREDIT-001": {
+        "near": {
+          "n": 25,
+          "acc": 0.56
+        },
+        "far": {
+          "n": 175,
+          "acc": 0.497
+        },
+        "threshold": 670,
+        "band": "\u00b12-3%"
+      },
+      "RULE-INCOME-001": {
+        "near": {
+          "n": 5,
+          "acc": 0.4
+        },
+        "far": {
+          "n": 194,
+          "acc": 0.51
+        },
+        "threshold": 30000,
+        "band": "\u00b12-3%"
+      },
+      "RULE-DTI-001": {
+        "near": {
+          "n": 5,
+          "acc": 0.4
+        },
+        "far": {
+          "n": 194,
+          "acc": 0.51
+        },
+        "threshold": 40,
+        "band": "\u00b12-3%"
+      },
+      "RULE-EMPLOY-002": {
+        "near": {
+          "n": 22,
+          "acc": 0.409
+        },
+        "far": {
+          "n": 178,
+          "acc": 0.517
+        },
+        "threshold": 6,
+        "band": "\u00b12-3%"
+      },
+      "RULE-LOANAMT-001": {
+        "near": {
+          "n": 9,
+          "acc": 0.333
+        },
+        "far": {
+          "n": 189,
+          "acc": 0.513
+        },
+        "threshold": "0.5x income",
+        "band": "\u00b12-3%"
+      }
+    },
+    "faithfulness": {
+      "n": 200,
+      "citation_precision": 0.4257,
+      "binding_recall": 0.6303,
+      "fully_faithful_share": 0.43
+    }
+  },
+  "few_shot": {
+    "name": "few_shot",
+    "accuracy": 0.4,
+    "macro_f1": 0.2536,
+    "n": 200,
+    "unparsed": 51,
+    "per_class": {
+      "APPROVE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 57
+      },
+      "FLAG_REVIEW": {
+        "precision": 0.2879,
+        "recall": 0.5278,
+        "f1": 0.3725,
+        "support": 36
+      },
+      "REJECT": {
+        "precision": 0.7349,
+        "recall": 0.5701,
+        "f1": 0.6421,
+        "support": 107
+      },
+      "UNPARSED": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion": {
+      "FLAG_REVIEW<-APPROVE": 16,
+      "FLAG_REVIEW<-FLAG_REVIEW": 19,
+      "REJECT<-REJECT": 61,
+      "FLAG_REVIEW<-REJECT": 31,
+      "UNPARSED<-APPROVE": 30,
+      "UNPARSED<-REJECT": 15,
+      "UNPARSED<-FLAG_REVIEW": 6,
+      "REJECT<-APPROVE": 11,
+      "REJECT<-FLAG_REVIEW": 11
+    },
+    "macro_f1_rules": 0.4966,
+    "per_rule": {
+      "RULE-AGE-001": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f1": 0.1818,
+        "support": 3
+      },
+      "RULE-BANKACCTS-001": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 8
+      },
+      "RULE-BANKRUPTCY-001": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 9
+      },
+      "RULE-CREDIT-001": {
+        "precision": 0.8333,
+        "recall": 0.5556,
+        "f1": 0.6667,
+        "support": 81
+      },
+      "RULE-DTI-001": {
+        "precision": 1.0,
+        "recall": 0.5333,
+        "f1": 0.6957,
+        "support": 30
+      },
+      "RULE-EMPLOY-001": {
+        "precision": 0.3,
+        "recall": 0.9,
+        "f1": 0.45,
+        "support": 10
+      },
+      "RULE-EMPLOY-002": {
+        "precision": 0.2642,
+        "recall": 0.5185,
+        "f1": 0.35,
+        "support": 27
+      },
+      "RULE-INCOME-001": {
+        "precision": 0.5556,
+        "recall": 0.3333,
+        "f1": 0.4167,
+        "support": 15
+      },
+      "RULE-LOANAMT-001": {
+        "precision": 0.05,
+        "recall": 0.1,
+        "f1": 0.0667,
+        "support": 10
+      },
+      "RULE-RESIDENCY-001": {
+        "precision": 0.2692,
+        "recall": 0.7,
+        "f1": 0.3889,
+        "support": 10
+      }
+    },
+    "boundary_slices": {
+      "RULE-AGE-001": {
+        "near": {
+          "n": 25,
+          "acc": 0.4
+        },
+        "far": {
+          "n": 175,
+          "acc": 0.4
+        },
+        "threshold": 18,
+        "band": "\u00b12-3%"
+      },
+      "RULE-CREDIT-001": {
+        "near": {
+          "n": 25,
+          "acc": 0.28
+        },
+        "far": {
+          "n": 175,
+          "acc": 0.417
+        },
+        "threshold": 670,
+        "band": "\u00b12-3%"
+      },
+      "RULE-INCOME-001": {
+        "near": {
+          "n": 5,
+          "acc": 1.0
+        },
+        "far": {
+          "n": 194,
+          "acc": 0.387
+        },
+        "threshold": 30000,
+        "band": "\u00b12-3%"
+      },
+      "RULE-DTI-001": {
+        "near": {
+          "n": 5,
+          "acc": 0.8
+        },
+        "far": {
+          "n": 194,
+          "acc": 0.392
+        },
+        "threshold": 40,
+        "band": "\u00b12-3%"
+      },
+      "RULE-EMPLOY-002": {
+        "near": {
+          "n": 22,
+          "acc": 0.409
+        },
+        "far": {
+          "n": 178,
+          "acc": 0.399
+        },
+        "threshold": 6,
+        "band": "\u00b12-3%"
+      },
+      "RULE-LOANAMT-001": {
+        "near": {
+          "n": 9,
+          "acc": 0.222
+        },
+        "far": {
+          "n": 189,
+          "acc": 0.413
+        },
+        "threshold": "0.5x income",
+        "band": "\u00b12-3%"
+      }
+    },
+    "faithfulness": {
+      "n": 200,
+      "citation_precision": 0.4743,
+      "binding_recall": 0.5134,
+      "fully_faithful_share": 0.445
+    }
+  }
+}

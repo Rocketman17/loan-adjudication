@@ -1,0 +1,11 @@
+.hf-cache/
+__pycache__/
+*.pyc
+models/
+*.egg-info/
+.env
+docker/
+docker-compose.yml
+src/api.py
+src/app.py
+scripts/

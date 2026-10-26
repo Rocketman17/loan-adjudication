@@ -1,0 +1,20 @@
+{
+  "distribution": {
+    "train": {
+      "APPROVE": 872,
+      "REJECT": 1600,
+      "FLAG_REVIEW": 528
+    },
+    "val": {
+      "FLAG_REVIEW": 88,
+      "REJECT": 265,
+      "APPROVE": 147
+    },
+    "test": {
+      "APPROVE": 146,
+      "FLAG_REVIEW": 86,
+      "REJECT": 268
+    }
+  },
+  "note": "labels generated exclusively by rules_engine; see README"
+}
