@@ -1,0 +1,13 @@
+# Training image (Jetson, JetPack 5 / CUDA 11.4 / aarch64)
+# Base already ships CUDA torch 2.0.0+nv23.05; we add the pinned Python stack.
+# FROM dustynv/l4t-pytorch:r35.4.1
+FROM dustynv/pytorch:2.1-r35.4.1
+
+# RUN pip3 install --upgrade torch==2.1.0 \
+#     --index-url https://pypi.jetson-ai-lab.dev/jp512/cu114
+
+COPY configs/requirements-training.txt /tmp/requirements-training.txt
+RUN pip3 install -r /tmp/requirements-training.txt
+
+WORKDIR /work
+CMD ["bash"]
