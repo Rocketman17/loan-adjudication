@@ -2,7 +2,7 @@
 
 A fine-tuned LLM that evaluates personal loan applications and produces an adjudication decision (`APPROVE` / `FLAG_REVIEW` / `REJECT`) with a natural-language rationale explaining which rules passed or failed.
 
-**Core idea:** A deterministic rules engine generates high-quality labeled training data. The fine-tuned LoRA adapter (Qwen2.5-1.5B-Instruct) learns to replicate this decision logic and explain its reasoning — acting as a standalone LLM adjudicator at inference time.
+**Core idea:** A deterministic rules engine generates high-quality labeled training data. The fine-tuned LoRA adapter (Qwen2.5-1.5B-Instruct) learns to replicate this decision logic and explain its reasoning - acting as a standalone LLM adjudicator at inference time.
 
 ## Project Structure
 
@@ -36,9 +36,9 @@ loan-adjudication/
 
 | Mode | Accuracy | Macro-F1 | Unparsed | Rule-F1 |
 |---|---|---|---|---|
-| **SFT — LoRA Qwen2.5-1.5B** | **0.725** | **0.545** | **0** | **0.907** |
-| Zero-shot — qwen2.5:3b | 0.505 | 0.383 | 4 | 0.434 |
-| Few-shot — qwen2.5:3b | 0.400 | 0.254 | 51 | 0.497 |
+| **SFT - LoRA Qwen2.5-1.5B** | **0.725** | **0.545** | **0** | **0.907** |
+| Zero-shot - qwen2.5:3b | 0.505 | 0.383 | 4 | 0.434 |
+| Few-shot - qwen2.5:3b | 0.400 | 0.254 | 51 | 0.497 |
 | Engine (ground truth) | 1.000 | 1.000 | 0 | 1.000 |
 
 See `REPORT.md` for full analysis and per-class breakdown.
@@ -93,7 +93,7 @@ client = TransformersClient(
     max_tokens=800
 )
 
-# Load raw application — label is never shown to the model
+# Load raw application - label is never shown to the model
 record = json.loads(open('data/synthetic/test.jsonl').readline())
 result = adjudicate_llm(client, build_messages(json.dumps(record['input'])))
 
@@ -143,4 +143,4 @@ python3 src/train_sft.py \
     --epochs 1 --max-len 2048
 ```
 
-> **Note:** Training requires `torch_dtype=torch.float32` and `fp16=False` — already set in `train_sft.py`. fp16 produces NaN at seq ~1400 on T4/Jetson due to softmax overflow.
+> **Note:** Training requires `torch_dtype=torch.float32` and `fp16=False` - already set in `train_sft.py`. fp16 produces NaN at seq ~1400 on T4/Jetson due to softmax overflow.
